@@ -2,11 +2,13 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import HomeHeader from './components/home'
+import UserContent from './components/content';
 
 function App() {
   return (
       <div className="App">
-      <div><HomeHeader /></div>
+      <HomeHeader />
+      <UserContent />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
