@@ -1,0 +1,26 @@
+header nav{
+    position: relative;
+    height: 10vh;
+}
+.menu{
+    position: absolute;
+    @include cflex(space-between);
+    background: $cBlack;
+    height: 100%;
+    width: 100%;
+}
+.menu--item{
+    display: none;
+}
+.menu--logo, .menu--number{
+    display: block;
+}
+.menu--logo a, .menu li a{
+    font-size: 11pt;
+}
+.menu--logo a{
+    color: $cBeige;
+}
+.menu--number a{
+    color: $cWhite;
+}

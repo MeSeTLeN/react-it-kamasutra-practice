@@ -1,0 +1,11 @@
+.projects_container--slider{
+    background: url('../img/Projects/image 2.png'), url('../img/Projects/image 2.1.png');
+    height: 500px;
+    width: 500px;
+}
+.projects_container--slider-arrow{
+
+}
+.parameters--item{
+    @include cflex;
+}

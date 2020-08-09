@@ -1,0 +1,5 @@
+@mixin cflex ($jc:center){
+    display: flex;
+    justify-content: $jc;
+    align-items: center;
+}

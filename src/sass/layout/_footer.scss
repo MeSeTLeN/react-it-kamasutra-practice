@@ -1,0 +1,22 @@
+footer>.wrapper{
+    height: 520px;
+    justify-content: space-between;
+    background: $cBlack;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.map{
+    background: url('../img/footer/image7.1.png')$imgNrCTC;
+    height: 260px;
+    width: 100%;
+}
+.contacts{
+    @include cflex;
+    text-align: center;
+}
+.social_media{
+    @include cflex;
+}
+.social_media>div{
+    margin: 0 5px;
+}

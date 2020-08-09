@@ -1,14 +1,15 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './sass/App.scss';
+import './sass/style.scss'
 import HomeHeader from './components/home'
-import UserContent from './components/content';
+import Content from './components/content';
 
 function App() {
   return (
       <div className="App">
       <HomeHeader />
-      <UserContent />
+      <Content />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

@@ -1,0 +1,20 @@
+.home_section-bg{
+    background: linear-gradient(rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.705)), url('../img/Home/home_bg.png') no-repeat center top / cover;
+    height: 90vh;
+    position: relative;
+}
+.home_content_box{
+    @include cflex(space-around);
+    flex-direction: column;
+    height: 100%;
+    color: $cWhite;
+}
+.home_content_box--company_name{
+    font-size: 23pt;
+}
+.home_content_box--company_name span{
+    color: $cBeige;
+}
+.home_content_box--subtitle{
+    font-size: 18pt;
+}
