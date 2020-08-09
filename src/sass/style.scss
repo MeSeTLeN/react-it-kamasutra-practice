@@ -1,43 +1,43 @@
-@import
-  './abstracts/variables',
-  './abstracts/functions',
-  './abstracts/mixins';
-//   'abstracts/placeholders';
+// @import
+//   './abstracts/variables',
+//   './abstracts/functions',
+//   './abstracts/mixins';
+// //   'abstracts/placeholders';
+
+ @import
+   './vendors/normalize';
 
 // @import
-//   './vendors/normalize';
+//   './base/reset',
+//   './base/typography';
 
-@import
-  './base/reset',
-  './base/typography';
-
-
-@import
-  './layout/navigation',
-  './layout/grid',
-  './layout/header',
-  './layout/footer',
-  './layout/forms',
-  './layout/main';
-//   'layout/sidebar',
-@import
-  './components/buttons',
-  './components/carousel';
-//   'components/cover',
-//   'components/dropdown';
-
-@import
-  './pages/home',
-  './pages/projects',
-  './pages/control',
-  './pages/repair',
-  './pages/fantasies',
-  './pages/design',
-  './pages/steps',
-  './pages/team',
-  './pages/clients';
-//   'pages/contact';
 
 // @import
-//   'themes/theme',
-//   'themes/admin';
+//   './layout/navigation',
+//   './layout/grid',
+//   './layout/header',
+//   './layout/footer',
+//   './layout/forms',
+//   './layout/main';
+// //   'layout/sidebar',
+// @import
+//   './components/buttons',
+//   './components/carousel';
+// //   'components/cover',
+// //   'components/dropdown';
+
+// @import
+//   './pages/home',
+//   './pages/projects',
+//   './pages/control',
+//   './pages/repair',
+//   './pages/fantasies',
+//   './pages/design',
+//   './pages/steps',
+//   './pages/team',
+//   './pages/clients';
+// //   'pages/contact';
+
+// // @import
+// //   'themes/theme',
+// //   'themes/admin';
