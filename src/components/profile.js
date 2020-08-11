@@ -1,12 +1,11 @@
 import React from "react";
-import s from '../sass/modules/profile.module.scss'
 
 const Profile = () => {
   return (
     <div className="profile">
       <a>Its CONTENT</a>
-      <div className={s.profile_bg}>profile bg</div>
-      <div className={s.profile_ava}>profile ava</div>
+      <div className='profile-bg'>profile bg</div>
+      <div className='profile-ava'>profile ava</div>
       <div className='profile-descr'>Jhon K.</div>
       <br/>
       <div className='profile-posts'>
