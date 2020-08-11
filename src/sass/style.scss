@@ -1,24 +1,24 @@
-// @import
-//   './abstracts/variables',
-//   './abstracts/functions',
-//   './abstracts/mixins';
-// //   'abstracts/placeholders';
+@import
+  './abstracts/variables',
+  './abstracts/functions',
+  './abstracts/mixins';
+  // 'abstracts/placeholders';
 
  @import
    './vendors/normalize';
 
-// @import
-//   './base/reset',
-//   './base/typography';
+@import
+  './base/reset',
+  './base/typography';
 
 
-// @import
-//   './layout/navigation',
+@import
+  './layout/nav',
 //   './layout/grid',
-//   './layout/header',
+  './layout/header',
 //   './layout/footer',
 //   './layout/forms',
-//   './layout/main';
+  './layout/profile';
 // //   'layout/sidebar',
 // @import
 //   './components/buttons',
@@ -36,8 +36,8 @@
 //   './pages/steps',
 //   './pages/team',
 //   './pages/clients';
-// //   'pages/contact';
+  // // 'pages/contact';
 
-// // @import
-// //   'themes/theme',
-// //   'themes/admin';
+// @import
+//   'themes/theme',
+//   'themes/admin';

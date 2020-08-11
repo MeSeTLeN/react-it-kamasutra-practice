@@ -1,15 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './sass/App.scss';
-import './sass/style.scss'
-import HomeHeader from './components/home'
-import Content from './components/content';
+import React from "react";
+import logo from "./logo.svg";
+import "./sass/App.scss";
+import "./sass/style.scss";
+import Nav from "./components/nav";
+import Header from "./components/header";
+import Profile from "./components/profile";
 
 function App() {
   return (
-      <div className="App">
-      <HomeHeader />
-      <Content />
+    <div className="App">
+      <Header />
+      <Nav />
+      <Profile />
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

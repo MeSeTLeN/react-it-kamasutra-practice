@@ -1,0 +1,19 @@
+.nav{
+    background-color: #282c34;
+width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    border: 2px solid #31e731;
+}
+
+.nav a{
+    color: white;
+}
+
+.nav a:visited{
+    color: white;
+}

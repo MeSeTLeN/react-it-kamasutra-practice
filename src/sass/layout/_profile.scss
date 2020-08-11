@@ -1,0 +1,37 @@
+.profile{
+  background-color: #282c34;
+  width: 84%; //change me to 85% at the end of edit
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  border: 2px solid #ffffff;
+}
+
+.profile a{
+  color: white;
+}
+
+.profile a:visited{
+  color: white;
+}
+
+.profile-bg{
+  background: url('../../img/Content/Profile-bg.jpg') no-repeat center top / cover;
+  height: 300px;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.profile-ava{
+  background: url('../../img/Content/Profile-ava.jpg') no-repeat center center / cover;
+  height: 150px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 100%;
+}
