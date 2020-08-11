@@ -13,12 +13,12 @@
 
 
 @import
-  './layout/nav',
+  '../components/Nav/nav',
 //   './layout/grid',
-  './layout/header',
+  '../components/Header/header',
 //   './layout/footer',
 //   './layout/forms',
-  './layout/profile';
+  '../components/Profile/profile';
 // //   'layout/sidebar',
 // @import
 //   './components/buttons',

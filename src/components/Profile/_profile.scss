@@ -35,3 +35,15 @@
   flex-direction: column;
   border-radius: 100%;
 }
+
+
+.post{
+  display: flex;
+  align-items: center;
+}
+.post-ava{
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: rgb(255, 224, 122);
+}

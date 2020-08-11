@@ -2,9 +2,9 @@ import React from "react";
 import logo from "./logo.svg";
 import "./sass/App.scss";
 import "./sass/style.scss";
-import Nav from "./components/nav";
-import Header from "./components/header";
-import Profile from "./components/profile";
+import Nav from "./components/Nav/Nav";
+import Header from "./components/Header/Header";
+import Profile from "./components/Profile/Profile";
 
 function App() {
   return (
@@ -12,7 +12,6 @@ function App() {
       <Header />
       <Nav />
       <Profile />
-
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
