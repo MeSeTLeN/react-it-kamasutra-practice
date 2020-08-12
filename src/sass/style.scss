@@ -13,9 +13,11 @@
 
 
 @import
+  './layout/AppContent',
   '../components/Nav/nav',
 //   './layout/grid',
   '../components/Header/header',
+  '../components/Dialogs/dialogs',
 //   './layout/footer',
 //   './layout/forms',
   '../components/Profile/profile';

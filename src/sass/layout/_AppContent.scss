@@ -1,0 +1,19 @@
+.App-content{
+    background-color: #282c34;
+    width: 84%; //change me to 85% at the end of edit
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    border: 2px solid #ffffff;
+  }
+  
+  .App-content a{
+    color: white;
+  }
+  
+  .App-content a:visited{
+    color: white;
+  }

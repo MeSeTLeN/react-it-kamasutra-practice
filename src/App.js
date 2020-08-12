@@ -5,13 +5,19 @@ import "./sass/style.scss";
 import Nav from "./components/Nav/Nav";
 import Header from "./components/Header/Header";
 import Profile from "./components/Profile/Profile";
+import Dialogs from "./components/Dialogs/Dialogs";
 
 function App() {
   return (
     <div className="App">
       <Header />
       <Nav />
-      <Profile />
+      <div className="App-content">
+        <Dialogs />
+        {/* <Profile /> */}
+      </div>
+      
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
