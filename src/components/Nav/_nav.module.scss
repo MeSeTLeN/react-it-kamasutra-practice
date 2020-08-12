@@ -8,12 +8,22 @@ width: 15%;
     font-size: calc(10px + 2vmin);
     color: white;
     border: 2px solid #31e731;
-}
+    }
 
 .nav a{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    padding: 5px 0;
     color: white;
+    border-radius: 30px;
 }
 
 .nav a:visited{
-    color: #92ffde;
+    color: white;
+}
+.nav a.active_link{
+    transition-duration: 1.5s;
+    background-color: #ffffffef;
+    color: #0000009a;
 }
