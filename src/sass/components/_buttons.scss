@@ -1,31 +1,34 @@
-.btn{
-    @include cflex;
-    height: $btnH;
-    width: 100%;
-}
-.btn_beige{
-    background: $cBeige;
-    color: $cWhite;
-}
-.btn_white{
-    height: 47px;
-    border: 2px solid $cWhite;
-    color: $cWhite;
-}
-.social_media--email, .social_media--instagram{
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    background: $cBeige;
-    @include cflex;
-}
-.social_media--email img, .social_media--instagram img{
-    height: 70%;
-    width: 70%;
-}
-// .social_media--email{
-//     background: url('../img/footer/email.svg') $imgNrC;
+
+
+// PREW PROJJ
+// .btn{
+//     @include cflex;
+//     height: $btnH;
+//     width: 100%;
 // }
-// .social_media--instagram{
-//     background: url('../img/footer/instagram.svg') $imgNrC;
+// .btn_beige{
+//     background: $cBeige;
+//     color: $cWhite;
 // }
+// .btn_white{
+//     height: 47px;
+//     border: 2px solid $cWhite;
+//     color: $cWhite;
+// }
+// .social_media--email, .social_media--instagram{
+//     height: 40px;
+//     width: 40px;
+//     border-radius: 50%;
+//     background: $cBeige;
+//     @include cflex;
+// }
+// .social_media--email img, .social_media--instagram img{
+//     height: 70%;
+//     width: 70%;
+// }
+// // .social_media--email{
+// //     background: url('../img/footer/email.svg') $imgNrC;
+// // }
+// // .social_media--instagram{
+// //     background: url('../img/footer/instagram.svg') $imgNrC;
+// // }
