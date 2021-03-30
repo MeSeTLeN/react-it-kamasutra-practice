@@ -1,0 +1,16 @@
+.nav {
+  grid-area: nav;
+  background-color: rgb(64, 170, 22);
+}
+
+.item {
+  color: #fff;
+}
+
+.item a:visited {
+  color: #fff;
+}
+
+.active {
+  color: rgb(224, 71, 10);
+}

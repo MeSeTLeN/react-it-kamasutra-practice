@@ -2,30 +2,7 @@
   display: grid;
   grid-template-areas:
     'header header'
-    'nav content';
+    'nav profile';
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
-}
-
-.header {
-  grid-area: header;
-  background-color: rgb(210, 230, 99);
-}
-
-.header > img {
-  height: 50px;
-}
-
-.nav {
-  grid-area: nav;
-  background-color: rgb(64, 170, 22);
-}
-
-.content {
-  grid-area: content;
-  background-color: rgb(30, 199, 199);
-}
-
-.content > img {
-  height: 400px;
 }
