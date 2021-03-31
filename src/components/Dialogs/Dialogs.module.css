@@ -2,7 +2,3 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
 }
-
-.active {
-  color: rgb(233, 219, 16);
-}
