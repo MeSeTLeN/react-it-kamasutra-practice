@@ -11,9 +11,9 @@ function MyPosts() {
         <button>Add post</button>
       </div>
       <div className={s.posts}>
-        <Post />
-        <Post />
-        <Post />
+        <Post message="Hello" like={5} />
+        <Post message="It's first post" like={2} />
+        <Post message="React JS" like={3} />
       </div>
     </div>
   )
