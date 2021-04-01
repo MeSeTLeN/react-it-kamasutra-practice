@@ -2,13 +2,7 @@ import React from 'react'
 import s from './MyPosts.module.css'
 import Post from './Post/Post'
 
-function MyPosts() {
-  let postData = [
-    { id: 1, message: 'Hello', like: 25 },
-    { id: 2, message: 'Its first post', like: 5 },
-    { id: 3, message: 'React JS', like: 2 },
-  ]
-
+function MyPosts({ postData }) {
   let postsElements = postData.map((post) => (
     <Post message={post.message} like={post.like} id={post.id} />
   ))
