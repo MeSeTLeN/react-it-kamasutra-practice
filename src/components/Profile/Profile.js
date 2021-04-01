@@ -3,12 +3,12 @@ import MyPosts from './MyPosts/MyPosts'
 import s from './Profile.module.css'
 import ProfileInfo from './ProfileInfo/ProfileInfo'
 
-function Profile({ postData }) {
+function Profile({ state }) {
   return (
     <div className={s.profile}>
       <ProfileInfo />
 
-      <MyPosts postData={postData} />
+      <MyPosts postData={state.postData} />
     </div>
   )
 }

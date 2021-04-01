@@ -10,7 +10,7 @@ import Feed from './components/Feed/Feed'
 import Music from './components/Music/Music'
 import Settings from './components/Settings/Settings'
 
-function App({ postData, dialogData, messageData }) {
+function App({ state }) {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
@@ -19,11 +19,11 @@ function App({ postData, dialogData, messageData }) {
         <div className="app-wrapper-content">
           <Switch>
             <Route path="/profile">
-              <Profile postData={postData} />
+              <Profile state={state.profilePage} />
             </Route>
 
             <Route path="/dialogs">
-              <Dialogs dialogData={dialogData} messageData={messageData} />
+              <Dialogs state={state.dialogsPage} />
             </Route>
 
             <Route path="/feed">
