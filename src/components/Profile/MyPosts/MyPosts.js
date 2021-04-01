@@ -9,6 +9,10 @@ function MyPosts() {
     { id: 3, message: 'React JS', like: 2 },
   ]
 
+  let postsElements = postData.map((post) => (
+    <Post message={post.message} like={post.like} id={post.id} />
+  ))
+
   return (
     <div>
       <div>My Posts</div>
@@ -16,11 +20,7 @@ function MyPosts() {
         <input type="text" />
         <button>Add post</button>
       </div>
-      <div className={s.posts}>
-        <Post message={postData[0].message} like={postData[0].like} />
-        <Post message={postData[1].message} like={postData[1].like} />
-        <Post message={postData[2].message} like={postData[2].like} />
-      </div>
+      <div className={s.posts}>{postsElements}</div>
     </div>
   )
 }
