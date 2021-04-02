@@ -12,11 +12,15 @@ const Dialogs = (props) => {
     <Message message={message.message} id={message.id} />
   ))
 
-  let newPostElement = createRef()
+  let newMessageElement = createRef()
 
   const send = () => {
-    let text = newPostElement.current.value
-    alert(text)
+    props.addMessage()
+  }
+
+  const onMessageChange = () => {
+    let text = newMessageElement.current.value
+    props.updateNewMessageText(text)
   }
 
   return (
@@ -25,7 +29,12 @@ const Dialogs = (props) => {
       <div className={s.dialogs__messages}>
         {messagesElements}
         <div className={s.messageInput}>
-          <input type="text" ref={newPostElement} />
+          <input
+            value={props.state.newMessageText}
+            onChange={onMessageChange}
+            type="text"
+            ref={newMessageElement}
+          />
           <button onClick={() => send()}>Send</button>
         </div>
       </div>
