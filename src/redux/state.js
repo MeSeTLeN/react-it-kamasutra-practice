@@ -22,4 +22,15 @@ let state = {
   },
 }
 
+export const addPost = (postMessage) => {
+  debugger
+  let newPost = {
+    id: 5,
+    message: postMessage,
+    like: 0,
+  }
+
+  state.profilePage.postData.push(newPost)
+}
+
 export default state

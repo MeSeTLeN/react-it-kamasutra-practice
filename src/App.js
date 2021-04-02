@@ -10,7 +10,7 @@ import Feed from './components/Feed/Feed'
 import Music from './components/Music/Music'
 import Settings from './components/Settings/Settings'
 
-function App({ state }) {
+function App(props) {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
@@ -19,11 +19,14 @@ function App({ state }) {
         <div className="app-wrapper-content">
           <Switch>
             <Route path="/profile">
-              <Profile state={state.profilePage} />
+              <Profile
+                state={props.state.profilePage}
+                addPost={props.addPost}
+              />
             </Route>
 
             <Route path="/dialogs">
-              <Dialogs state={state.dialogsPage} />
+              <Dialogs state={props.state.dialogsPage} />
             </Route>
 
             <Route path="/feed">
