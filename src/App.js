@@ -26,10 +26,7 @@ function App(props) {
             </Route>
 
             <Route path="/dialogs">
-              <Dialogs
-                state={props.state.dialogsPage}
-                dispatch={props.dispatch}
-              />
+              <Dialogs store={props.store} />
             </Route>
 
             <Route path="/feed">

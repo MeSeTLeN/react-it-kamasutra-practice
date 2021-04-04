@@ -1,4 +1,4 @@
-import React, { createRef } from 'react'
+import React from 'react'
 import {
   addMessageActionCreator,
   updateNewMessageTextActionCreator,
@@ -8,23 +8,23 @@ import s from './Dialogs.module.css'
 import Message from './Message/Message'
 
 const Dialogs = (props) => {
-  let dialogsElements = props.state.dialogData.map((dialog) => (
+  const state = props.store.getState().dialogsPage
+
+  let dialogsElements = state.dialogData.map((dialog) => (
     <Dialog name={dialog.name} id={dialog.id} />
   ))
 
-  let messagesElements = props.state.messageData.map((message) => (
+  let messagesElements = state.messageData.map((message) => (
     <Message message={message.message} id={message.id} />
   ))
 
-  let newMessageElement = createRef()
-
   const send = () => {
-    props.dispatch(addMessageActionCreator())
+    props.store.dispatch(addMessageActionCreator())
   }
 
-  const onMessageChange = () => {
-    let text = newMessageElement.current.value
-    props.dispatch(updateNewMessageTextActionCreator(text))
+  const onMessageChange = (e) => {
+    let text = e.target.value
+    props.store.dispatch(updateNewMessageTextActionCreator(text))
   }
 
   return (
@@ -34,10 +34,9 @@ const Dialogs = (props) => {
         {messagesElements}
         <div className={s.messageInput}>
           <input
-            value={props.state.newMessageText}
+            value={state.newMessageText}
             onChange={onMessageChange}
             type="text"
-            ref={newMessageElement}
           />
           <button onClick={() => send()}>Send</button>
         </div>
