@@ -24,13 +24,18 @@ let store = {
       newMessageText: 'Type new message here',
     },
   },
-  getState() {
-    return this._state
-  },
   _callSubscriber() {
     console.log('state changed')
   },
-  addPost() {
+
+  getState() {
+    return this._state
+  },
+  subscribe(observer) {
+    this._callSubscriber = observer
+  },
+
+  _addPost() {
     let newPost = {
       id: 5,
       message: this._state.profilePage.newPostText,
@@ -42,12 +47,13 @@ let store = {
 
     this._callSubscriber()
   },
-  updateNewPostText(newText) {
+  _updateNewPostText(newText) {
     this._state.profilePage.newPostText = newText
 
     this._callSubscriber()
   },
-  addMessage() {
+
+  _addMessage() {
     let newMessage = {
       id: 5,
       message: this._state.dialogsPage.newMessageText,
@@ -58,13 +64,37 @@ let store = {
 
     this._callSubscriber()
   },
-  updateNewMessageText(newText) {
+  _updateNewMessageText(newText) {
     this._state.dialogsPage.newMessageText = newText
 
     this._callSubscriber()
   },
-  subscribe(observer) {
-    this._callSubscriber = observer
+
+  dispatch(action) {
+    switch (action.type) {
+      case 'ADD_POST':
+        this._addPost()
+
+        break
+
+      case 'UPDATE_NEW_POST_TEXT':
+        this._updateNewPostText(action.newText)
+
+        break
+
+      case 'ADD_MESSAGE':
+        this._addMessage()
+
+        break
+
+      case 'UPDATE_NEW_MESSAGE_TEXT':
+        this._updateNewMessageText(action.newText)
+
+        break
+
+      default:
+        break
+    }
   },
 }
 
