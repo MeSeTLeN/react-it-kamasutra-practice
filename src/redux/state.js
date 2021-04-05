@@ -1,7 +1,6 @@
-const ADD_POST = 'ADD_POST'
-const UPDATE_NEW_POST_TEXT = 'UPDATE_NEW_POST_TEXT'
-const ADD_MESSAGE = 'ADD_MESSAGE'
-const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE_NEW_MESSAGE_TEXT'
+import profileReducer from './profile_reducer'
+import dialogsReducer from './dialogs_reducer'
+import sidebarReducer from './sidebar_reducer'
 
 let store = {
   _state: {
@@ -28,7 +27,9 @@ let store = {
       ],
       newMessageText: 'Type new message here',
     },
+    sidebar: {},
   },
+
   _callSubscriber() {
     console.log('state changed')
   },
@@ -40,81 +41,13 @@ let store = {
     this._callSubscriber = observer
   },
 
-  _addPost() {
-    let newPost = {
-      id: 5,
-      message: this._state.profilePage.newPostText,
-      like: 0,
-    }
-
-    this._state.profilePage.postData.push(newPost)
-    this._state.profilePage.newPostText = ''
-
-    this._callSubscriber()
-  },
-  _updateNewPostText(newText) {
-    this._state.profilePage.newPostText = newText
-
-    this._callSubscriber()
-  },
-
-  _addMessage() {
-    let newMessage = {
-      id: 5,
-      message: this._state.dialogsPage.newMessageText,
-    }
-
-    this._state.dialogsPage.messageData.push(newMessage)
-    this._state.dialogsPage.newMessageText = ''
-
-    this._callSubscriber()
-  },
-  _updateNewMessageText(newText) {
-    this._state.dialogsPage.newMessageText = newText
-
-    this._callSubscriber()
-  },
-
   dispatch(action) {
-    switch (action.type) {
-      case 'ADD_POST':
-        this._addPost()
+    this._state.profilePage = profileReducer(this._state.profilePage, action)
+    this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action)
+    this._state.sidebar = sidebarReducer(this._state.sidebar, action)
 
-        break
-
-      case 'UPDATE_NEW_POST_TEXT':
-        this._updateNewPostText(action.newText)
-
-        break
-
-      case 'ADD_MESSAGE':
-        this._addMessage()
-
-        break
-
-      case 'UPDATE_NEW_MESSAGE_TEXT':
-        this._updateNewMessageText(action.newText)
-
-        break
-
-      default:
-        break
-    }
+    this._callSubscriber()
   },
 }
-
-export const addPostActionCreator = () => ({ type: ADD_POST })
-
-export const updateNewPostTextActionCreator = (text) => ({
-  type: UPDATE_NEW_POST_TEXT,
-  newText: text,
-})
-
-export const addMessageActionCreator = () => ({ type: ADD_MESSAGE })
-
-export const updateNewMessageTextActionCreator = (text) => ({
-  type: UPDATE_NEW_MESSAGE_TEXT,
-  newText: text,
-})
 
 export default store
